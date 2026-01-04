@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 港股散戶參與度監察系統</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #1a237e; text-align: center; margin-bottom: 10px; }
+        .intro { text-align: center; color: #555; margin-bottom: 30px; font-size: 0.9em; }
+        .monitor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .strategy-card { background: #e8eaf6; padding: 20px; border-radius: 10px; border-left: 5px solid #3f51b5; line-height: 1.6; }
+        .stock-widget { height: 500px; background: #fff; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.8em; margin-right: 5px; }
+        .tag-buy { background: #c8e6c9; color: #2e7d32; }
+        .tag-warn { background: #ffecb3; color: #ff8f00; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📉 曾氏散戶參與度監察系統</h1>
+    <p class="intro">結合「富足一生」哲學：監控 2026 減息週期下的港股機會</p>
+
+    <div class="monitor-grid">
+        <div class="strategy-card">
+            <h3>💡 2026 曾淵滄實戰心法</h3>
+            <ul>
+                <li><span class="tag tag-buy">建倉期</span> <strong>參與度低於 30%：</strong> 市場絕望、成交縮減。曾博士提醒：此時分批吸納 7% 息率之藍籌。</li>
+                <li><span class="tag tag-warn">警戒期</span> <strong>參與度高於 80%：</strong> 群眾瘋狂、論壇洗版。曾博士提醒：宜減持鎖定利潤，切勿追高。</li>
+                <li><strong>重點觀察：</strong> 0941 中移動、2318 平安、0700 騰訊。</li>
+            </ul>
+        </div>
+
+        <div class="stock-widget">
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+              {
+              "colorTheme": "light",
+              "dateRange": "12M",
+              "showChart": true,
+              "locale": "zh_TW",
+              "largeChartUrl": "",
+              "isTransparent": false,
+              "showSymbolLogo": true,
+              "showFloatingTooltip": false,
+              "width": "100%",
+              "height": "500",
+              "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+              "plotLineColorFalling": "rgba(255, 70, 70, 1)",
+              "gridLineColor": "rgba(240, 243, 250, 0)",
+              "scaleFontColor": "rgba(106, 109, 114, 1)",
+              "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+              "belowLineFillColorFalling": "rgba(255, 70, 70, 0.12)",
+              "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+              "belowLineFillColorFallingBottom": "rgba(255, 70, 70, 0)",
+              "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+              "tabs": [
+                {
+                  "title": "曾氏核心觀察股",
+                  "symbols": [
+                    { "s": "HKEX:941", "d": "中國移動 (收息首選)" },
+                    { "s": "HKEX:2318", "d": "中國平安 (估值修復)" },
+                    { "s": "HKEX:700", "d": "騰訊控股 (科技龍頭)" },
+                    { "s": "HKEX:5", "d": "匯豐控股 (高息藍籌)" },
+                    { "s": "HKEX:823", "d": "領展房產 (減息受惠)" }
+                  ],
+                  "originalTitle": "Indices"
+                }
+              ]
+            }
+              </script>
+            </div>
+            </div>
+    </div>
+
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+    <div style="height: 500px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+          <div id="tradingview_chart"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget({
+            "autosize": true,
+            "symbol": "HKEX:941",
+            "interval": "D",
+            "timezone": "Asia/Hong_Kong",
+            "theme": "light",
+            "style": "1",
+            "locale": "zh_TW",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": false,
+            "save_image": false,
+            "container_id": "tradingview_chart"
+          });
+          </script>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
